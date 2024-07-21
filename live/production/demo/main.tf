@@ -1,6 +1,6 @@
 module "demo" {
   source            = "../../../modules/app-services"
-  docker_image_name = "pj3677/color-app:${var.version}"
+  docker_image_name = "pj3677/color-app:${var.app_version}"
   service_name      = local.stack_name
   location          = "East US"
   environment       = terraform.workspace
@@ -19,7 +19,7 @@ variable "color" {
   default = "blue"
 }
 
-variable "version" {
+variable "app_version" {
   type    = string
   default = "1.0.0"
 }
