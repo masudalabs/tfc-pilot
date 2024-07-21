@@ -2,7 +2,7 @@ module "demo" {
   source            = "../../../modules/app-services"
   docker_image_name = "pj3677/color-app:${var.app_version}"
   service_name      = local.stack_name
-  location          = "East US"
+  location          = "East US 2"
   environment       = terraform.workspace
   app_settings = {
     MESSAGE  = local.stack_name
@@ -25,5 +25,5 @@ variable "app_version" {
 }
 
 provider "azurerm" {
-    features {}
+  features {}
 }
