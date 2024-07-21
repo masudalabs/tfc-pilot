@@ -28,3 +28,8 @@ variable "environment" {
   type        = string
   description = "Ambiente prod/dev"
 }
+
+variable "app_settings" {
+  type    = map(string)
+  default = {}
+}

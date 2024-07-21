@@ -11,6 +11,7 @@ resource "azurerm_linux_web_app" "main" {
   location            = var.location
   resource_group_name = azurerm_resource_group.main.name
   service_plan_id     = azurerm_service_plan.main.id
+  app_settings        = var.app_settings
   site_config {
     application_stack {
       docker_image_name = var.docker_image_name
@@ -18,11 +19,10 @@ resource "azurerm_linux_web_app" "main" {
   }
 
   tags = local.full_tags
-
 }
 
 resource "azurerm_resource_group" "main" {
-  name     = "${lower(local.full_name)-rg}"
+  name     = "${lower(local.full_name)}-rg"
   location = var.location
   tags     = local.full_tags
 }
