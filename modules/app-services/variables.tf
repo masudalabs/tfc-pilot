@@ -8,11 +8,6 @@ variable "location" {
   description = "Nome da localização do serviço"
 }
 
-variable "service_resource_group_name" {
-  type        = string
-  description = "Nome do resource group"
-}
-
 variable "service_extra_tags" {
   type        = map(string)
   default     = {}
