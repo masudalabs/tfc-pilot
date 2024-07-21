@@ -27,3 +27,7 @@ variable "app_version" {
 provider "azurerm" {
   features {}
 }
+
+output "appservice_address" {
+    value = module.demo.appservice_address
+}
