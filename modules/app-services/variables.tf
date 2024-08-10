@@ -14,6 +14,11 @@ variable "docker_image_name" {
   description = "Nome de uma imagem no formato image:tag"
 }
 
+variable "docker_registry_url" {
+  type = string
+  description = "registry url"
+}
+
 variable "environment" {
   type        = string
   description = "Ambiente prod/dev"
