@@ -28,5 +28,5 @@ provider "azurerm" {
 }
 
 output "appservice_address" {
-    value = module.demo.appservice_address
+    value = module.color-app.appservice_address
 }
