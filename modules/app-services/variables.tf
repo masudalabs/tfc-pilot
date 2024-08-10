@@ -1,8 +1,3 @@
-variable "service_name" {
-  type        = string
-  description = "Nome do serviço a ser criado"
-}
-
 variable "location" {
   type        = string
   description = "Nome da localização do serviço"
