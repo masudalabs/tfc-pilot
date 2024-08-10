@@ -1,7 +1,7 @@
 module "demo" {
   source            = "../../../modules/app-services"
   docker_image_name = "pj3677/color-app:${var.app_version}"
-  docker_registry_url = "https://registry.hub.docker.com/library"
+  docker_registry_url = "https://index.docker.io"
   location          = "East US 2"
   environment       = terraform.workspace
   app_settings = {
