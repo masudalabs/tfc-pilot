@@ -10,8 +10,6 @@ module "color-app" {
   }
 }
 
-
-
 variable "color" {
   type    = string
   default = "blue"
